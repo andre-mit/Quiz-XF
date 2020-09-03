@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Quiz.Views.MainPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    Title="Quiz">
+
+    <StackLayout>
+        <Frame
+            Padding="24"
+            BackgroundColor="#2196F3"
+            CornerRadius="0">
+            <Label
+                FontSize="36"
+                HorizontalTextAlignment="Center"
+                Text="Seja bem vindo ao Quiz sobre programação!"
+                TextColor="White" />
+        </Frame>
+        <Label
+            FontSize="Title"
+            HorizontalOptions="Center"
+            Text="Vamos debugar seu cérebro" />
+        <Button
+            x:Name="btnStart"
+            Margin="30,10,30,10"
+            Padding="30"
+            BackgroundColor="#2196f3"
+            Clicked="btnStart_Clicked"
+            CornerRadius="10"
+            FontSize="25"
+            HorizontalOptions="Center"
+            Text="Iniciar"
+            TextColor="#FFFFFF" />
+        <Image
+            Aspect="AspectFill"
+            HorizontalOptions="CenterAndExpand"
+            Source="https://images-na.ssl-images-amazon.com/images/I/41WGdQ+3ceL._SX331_BO1,204,203,200_.jpg"
+            VerticalOptions="CenterAndExpand" />
+        <StackLayout
+            Padding="10"
+            BackgroundColor="#2196F3"
+            HorizontalOptions="Fill"
+            VerticalOptions="EndAndExpand">
+            <Label
+                FontSize="15"
+                HorizontalTextAlignment="Center"
+                Text="Desenvolvido por André Augusto"
+                TextColor="White" />
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Quiz.Views.QuestionPage"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label
+                Text="{Binding QuestionText}"
+                d:Text="Question"
+                VerticalOptions="Start" 
+                HorizontalOptions="CenterAndExpand"
+                FontSize="22"
+                Padding="10"
+            />
+            <StackLayout>
+                <ListView
+                    x:Name="listQuestions"
+                    ItemsSource="{Binding Alternatives}"
+                    ItemSelected="listQuestions_ItemSelected">
+                    <d:ListView.ItemsSource>
+                        <x:Array Type="{x:Type x:String}">
+                            <x:String>Option 01</x:String>
+                            <x:String>Option 02</x:String>
+                            <x:String>Option 03</x:String>
+                            <x:String>Option 04</x:String>
+                            <x:String>Option 05</x:String>
+                        </x:Array>
+                    </d:ListView.ItemsSource>
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <Label
+                                    Text="{Binding .}"
+                                    VerticalTextAlignment="Center"
+                                    HorizontalTextAlignment="Center"
+                                />
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+            <Button
+                x:Name="btnOk"
+                Clicked="btnOk_Clicked"
+                IsEnabled="False"
+                d:Text="Next"
+                BackgroundColor="#2196F3"
+                TextColor="#FFF"
+            />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

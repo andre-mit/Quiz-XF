@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="Quiz.Views.ResultsPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="Resultados"
+    mc:Ignorable="d">
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout VerticalOptions="CenterAndExpand" Orientation="Vertical">
+                <Label
+                    x:Name="lblMessage"
+                    d:Text="Your score is 5 points"
+                    FontSize="30"
+                    HorizontalOptions="CenterAndExpand" />
+                <Label
+                    x:Name="lblScore"
+                    d:Text="Your score is 5 points"
+                    FontSize="22"
+                    HorizontalOptions="CenterAndExpand"/>
+            </StackLayout>
+            <Button
+                x:Name="btnRestart"
+                d:Text="Go to home"
+                Clicked="btnRestart_Clicked"
+                Text="Voltar ao início"
+                BackgroundColor="#2196F3"
+                TextColor="#FFF"
+            />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
